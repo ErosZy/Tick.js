@@ -31,7 +31,7 @@ var Tick = (function(w,u){
       "easeInOutCirc":{a:{x:0.785,y:0.135},b:{x:0.15,y:0.86}},
       "easeInBack":{a:{x:0.6,y:-0.28},b:{x:0.735,y:0.045}},
       "easeOutBack":{a:{x:0.175,y:0.885},b:{x:0.32,y:1.275}},
-      "easeInOutBack":{a:{x:0.68,y:-0.55},b:{x:0.265,y:1.55}},
+      "easeInOutBack":{a:{x:0.68,y:-0.55},b:{x:0.265,y:1.55}}
     };
 
     /**
