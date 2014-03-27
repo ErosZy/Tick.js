@@ -348,8 +348,8 @@ var Tick = (function(w,u){
 
                 timeScale = sub;
 
-                if(timeScale < 1000 / 60)
-                    timeScale = 1000 / 60;
+                if(timeScale < 13)
+                    timeScale = 13;
 
                 time = speed * scale.x;
 
