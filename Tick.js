@@ -4,7 +4,7 @@
 var Tick = (function(w,u){
     var window = w,
         undefined = u,
-        isIE = document.getElementsByTagName("body")[0].currentStyle,
+        isIE = !window.getComputedStyle,
         Tick = {};
 
     var animateType = {
