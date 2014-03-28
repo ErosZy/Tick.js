@@ -8,34 +8,34 @@ var Tick = (function(w,u){
         Tick = {};
 
     var animateType = {
-      "easeInSine":{a:{x:0.47,y:0},b:{x:0.745,y:0.715}},
-      "easeOutSine":{a:{x:0.39,y:0.575},b:{x:0.565,y:1}},
-      "easeInOutSine":{a:{x:0.445,y:0.05},b:{x:0.55,y:0.95}},
-      "easeInQuad":{a:{x:0.55,y:0.085},b:{x:0.68,y:0.53}},
-      "easeOutQuad":{a:{x:0.25,y:0.46},b:{x:0.45,y:0.94}},
-      "easeInOutQuad":{a:{x:0.455,y:0.03},b:{x:0.515,y:0.955}},
-      "easeInCubic":{a:{x:0.55,y:0.055},b:{x:0.675,y:0.19}},
-      "easeOutCubic":{a:{x:0.215,y:0.61},b:{x:0.355,y:1}},
-      "easeInOutCubic":{a:{x:0.645,y:0.045},b:{x:0.355,y:1}},
-      "easeInQuart":{a:{x:0.895,y:0.03},b:{x:0.685,y:0.22}},
-      "easeOutQuart":{a:{x:0.165,y:0.84},b:{x:0.44,y:1}},
-      "easeInOutQuart":{a:{x:0.77,y:0},b:{x:0.0175,y:1}},
-      "easeInQuint":{a:{x:0.755,y:0.05},b:{x:0.855,y:0.06}},
-      "easeOutQuint":{a:{x:0.23,y:1},b:{x:0.32,y:1}},
-      "easeInOutQuint":{a:{x:0.86,y:0},b:{x:0.07,y:1}},
-      "easeInExpo":{a:{x:0.95,y:0.05},b:{x:0.795,y:0.035}},
-      "easeOutExpo":{a:{x:0.19,y:1},b:{x:0.22,y:1}},
-      "easeInOutExpo":{a:{x:1,y:0},b:{x:0,y:1}},
-      "easeInCirc":{a:{x:0.6,y:0.04},b:{x:0.98,y:0.335}},
-      "easeOutCirc":{a:{x:0.075,y:0.82},b:{x:0.165,y:1}},
-      "easeInOutCirc":{a:{x:0.785,y:0.135},b:{x:0.15,y:0.86}},
-      "easeInBack":{a:{x:0.6,y:-0.28},b:{x:0.735,y:0.045}},
-      "easeOutBack":{a:{x:0.175,y:0.885},b:{x:0.32,y:1.275}},
-      "easeInOutBack":{a:{x:0.68,y:-0.55},b:{x:0.265,y:1.55}}
+        "easeInSine":{a:{x:0.47,y:0},b:{x:0.745,y:0.715}},
+        "easeOutSine":{a:{x:0.39,y:0.575},b:{x:0.565,y:1}},
+        "easeInOutSine":{a:{x:0.445,y:0.05},b:{x:0.55,y:0.95}},
+        "easeInQuad":{a:{x:0.55,y:0.085},b:{x:0.68,y:0.53}},
+        "easeOutQuad":{a:{x:0.25,y:0.46},b:{x:0.45,y:0.94}},
+        "easeInOutQuad":{a:{x:0.455,y:0.03},b:{x:0.515,y:0.955}},
+        "easeInCubic":{a:{x:0.55,y:0.055},b:{x:0.675,y:0.19}},
+        "easeOutCubic":{a:{x:0.215,y:0.61},b:{x:0.355,y:1}},
+        "easeInOutCubic":{a:{x:0.645,y:0.045},b:{x:0.355,y:1}},
+        "easeInQuart":{a:{x:0.895,y:0.03},b:{x:0.685,y:0.22}},
+        "easeOutQuart":{a:{x:0.165,y:0.84},b:{x:0.44,y:1}},
+        "easeInOutQuart":{a:{x:0.77,y:0},b:{x:0.0175,y:1}},
+        "easeInQuint":{a:{x:0.755,y:0.05},b:{x:0.855,y:0.06}},
+        "easeOutQuint":{a:{x:0.23,y:1},b:{x:0.32,y:1}},
+        "easeInOutQuint":{a:{x:0.86,y:0},b:{x:0.07,y:1}},
+        "easeInExpo":{a:{x:0.95,y:0.05},b:{x:0.795,y:0.035}},
+        "easeOutExpo":{a:{x:0.19,y:1},b:{x:0.22,y:1}},
+        "easeInOutExpo":{a:{x:1,y:0},b:{x:0,y:1}},
+        "easeInCirc":{a:{x:0.6,y:0.04},b:{x:0.98,y:0.335}},
+        "easeOutCirc":{a:{x:0.075,y:0.82},b:{x:0.165,y:1}},
+        "easeInOutCirc":{a:{x:0.785,y:0.135},b:{x:0.15,y:0.86}},
+        "easeInBack":{a:{x:0.6,y:-0.28},b:{x:0.735,y:0.045}},
+        "easeOutBack":{a:{x:0.175,y:0.885},b:{x:0.32,y:1.275}},
+        "easeInOutBack":{a:{x:0.68,y:-0.55},b:{x:0.265,y:1.55}}
     };
 
     /**
-     * ³õÊ¼»¯²ÎÊı
+     * åˆå§‹åŒ–å‚æ•°
      * @param target
      * @param params
      * @returns []
@@ -75,9 +75,9 @@ var Tick = (function(w,u){
     };
 
     /**
-     * toº¯Êı
-     * @param target ÔË¶¯¶ÔÏó
-     * @param params ÔË¶¯²ÎÊı
+     * toå‡½æ•°
+     * @param target è¿åŠ¨å¯¹è±¡
+     * @param params è¿åŠ¨å‚æ•°
      */
     Tick.to = function(target,params){
         var self = this;
@@ -91,9 +91,9 @@ var Tick = (function(w,u){
     };
 
     /**
-     * fromº¯Êı
-     * @param target ÔË¶¯¶ÔÏó
-     * @param params ÔË¶¯²ÎÊı
+     * fromå‡½æ•°
+     * @param target è¿åŠ¨å¯¹è±¡
+     * @param params è¿åŠ¨å‚æ•°
      */
     Tick.from = function(target,params){
         var self = this;
@@ -118,10 +118,10 @@ var Tick = (function(w,u){
     };
 
     /**
-     * fromToº¯Êı
-     * @param target ÔË¶¯¶ÔÏó
-     * @param tParams toÔË¶¯²ÎÊı
-     * @param fParams fromÔË¶¯²ÎÊı
+     * fromToå‡½æ•°
+     * @param target è¿åŠ¨å¯¹è±¡
+     * @param tParams toè¿åŠ¨å‚æ•°
+     * @param fParams fromè¿åŠ¨å‚æ•°
      */
     Tick.fromTo = function(target,tParams,fParams){
         var self = this;
@@ -134,7 +134,7 @@ var Tick = (function(w,u){
                 self._css(target,item,fParams[item]);
             }
         }
-        
+
         Array.prototype.splice.call(arguments,2,1);
         tParams = self.init.apply(self,arguments);
 
@@ -142,7 +142,7 @@ var Tick = (function(w,u){
     };
 
     /**
-     * ¶ÁÈ¡»òÉèÖÃÊôĞÔ
+     * è¯»å–æˆ–è®¾ç½®å±æ€§
      * @returns {*} (target,json) || (target,attr) || (target,attr,val)
      * @private
      */
@@ -157,7 +157,7 @@ var Tick = (function(w,u){
         if(argsLen < 2)
             return;
 
-        //ÉèÖÃ
+        //è®¾ç½®
         if(isSet){
             attr = arguments[1];
             val = arguments[2];
@@ -174,7 +174,7 @@ var Tick = (function(w,u){
             }
 
         }else{
-        //¶ÁÈ¡
+            //è¯»å–
             attr = arguments[1];
 
             return self._getAttr(target,attr);
@@ -183,22 +183,22 @@ var Tick = (function(w,u){
     };
 
     /**
-     * ÉèÖÃÔªËØÊôĞÔ
-     * @param target ÉèÖÃÊôĞÔµÄÔªËØ
-     * @param attr ÊôĞÔÃû
-     * @param val ÊôĞÔÖµ
+     * è®¾ç½®å…ƒç´ å±æ€§
+     * @param target è®¾ç½®å±æ€§çš„å…ƒç´ 
+     * @param attr å±æ€§å
+     * @param val å±æ€§å€¼
      * @private
      */
     Tick._setAttr = function(target,attr,val){
         if(attr == "opacity"){
             if(isIE){
-                var reg = /(opacity=)(\d+)/i,
-                    filter = attr.currentStyle.filter;
+                var reg = /(opacity=)(\d+(\.\d+)?)/i,
+                    filter = target.currentStyle.filter;
 
                 val *= 100;
                 attr = "filter";
 
-                val = filter.replace(reg,function(){
+                val = filter && filter.replace(reg,function(){
                     return arguments[1] + val;
                 });
             }
@@ -210,22 +210,22 @@ var Tick = (function(w,u){
     };
 
     /**
-     * ¶ÁÈ¡ÔªËØÊôĞÔ
-     * @param target ¶ÁÈ¡ÊôĞÔµÄÔªËØ
-     * @param attr ¶ÁÈ¡ÊôĞÔ
+     * è¯»å–å…ƒç´ å±æ€§
+     * @param target è¯»å–å±æ€§çš„å…ƒç´ 
+     * @param attr è¯»å–å±æ€§
      * @private
      */
     Tick._getAttr = function(target,attr){
         var val,match;
 
         if(attr == "opacity" && isIE){
-            var reg = /alpha(?:opacity=(\d+))/i,
+            var reg = /alpha\((?:opacity=(\d+(\.\d+)?))\)/i,
                 filter = target.currentStyle["filter"];
 
             match = filter.match(reg);
 
-            if(match.length > 0)
-                val = match[1];
+            if(match && match.length > 0)
+                val = "" + (match[1] / 100);
         }else{
             if(isIE){
                 val = target.currentStyle[attr];
@@ -234,16 +234,15 @@ var Tick = (function(w,u){
             }
         }
 
-
-        if(match = val.match(/(\d+(\.\d+)?)px/i))
+        if((match = val && val.match(/(\d+(\.\d+)?)px/i)))
             val = match[1];
 
         return val;
     };
 
     /**
-     * ÅĞ¶ÏÊÇ·ñÊÇ¶ÔÏóJSON
-     * @param obj ±»ÅĞ¶ÏµÄ¶ÔÏó
+     * åˆ¤æ–­æ˜¯å¦æ˜¯å¯¹è±¡JSON
+     * @param obj è¢«åˆ¤æ–­çš„å¯¹è±¡
      * @returns {boolean}
      * @private
      */
@@ -252,8 +251,8 @@ var Tick = (function(w,u){
     };
 
     /**
-     * ÅĞ¶ÏÊÇ·ñÊÇ×Ö·û´®
-     * @param str ±»ÅĞ¶ÏµÄ¶ÔÏó
+     * åˆ¤æ–­æ˜¯å¦æ˜¯å­—ç¬¦ä¸²
+     * @param str è¢«åˆ¤æ–­çš„å¯¹è±¡
      * @returns {boolean}
      * @private
      */
@@ -262,12 +261,12 @@ var Tick = (function(w,u){
     };
 
     /**
-     * ±´Èû¶ûº¯Êı
-     * @param pa ¿ØÖÆµãA
-     * @param pb ¿ØÖÆµãB
-     * @param pc ¿ØÖÆµãC
-     * @param pd ¿ØÖÆµãD
-     * @param t  ±ÈÀıÊı£¬·¶Î§0~1
+     * è´å¡å°”å‡½æ•°
+     * @param pa æ§åˆ¶ç‚¹A
+     * @param pb æ§åˆ¶ç‚¹B
+     * @param pc æ§åˆ¶ç‚¹C
+     * @param pd æ§åˆ¶ç‚¹D
+     * @param t  æ¯”ä¾‹æ•°ï¼ŒèŒƒå›´0~1
      * @returns {{x: number, y: number}}
      * @private
      */
@@ -287,11 +286,11 @@ var Tick = (function(w,u){
 
 
     /**
-     * ÔË¶¯º¯Êı
-     * @param target ÔË¶¯µÄ¶ÔÏó
-     * @param json ÊôĞÔ
-     * @param speed ËÙ¶È
-     * @param fn »Øµ÷º¯Êı
+     * è¿åŠ¨å‡½æ•°
+     * @param target è¿åŠ¨çš„å¯¹è±¡
+     * @param json å±æ€§
+     * @param speed é€Ÿåº¦
+     * @param fn å›è°ƒå‡½æ•°
      * @private
      */
     Tick._animate = function(target,json,type,speed,fn,fnParams){
@@ -315,9 +314,9 @@ var Tick = (function(w,u){
         if(target.timer)
             clearTimeout(target.timer);
 
-        //ÕâÀïÊÇÖØµã£¬ÕâÖÖ·½·¨ÊÇÄ£ºıÄ£Äâ±´Èû¶ûÇúÏßµÄ£¬
-        //Èç¹ûĞèÒª¾«È·µØÄ£ÄâÊÇĞèÒª½âÈı´Î·½³ÌµÄ
-        //µ«ÊÇÎÒÃÇÍ¬ÑùĞèÒª±È½Ï¾«È·µÄ·Ö²¿ÇúÏß£¬¾ßÌåµÄ×ö·¨ÊÇ³ËÒ»¸ö±ÈÀıÏµÊı£¬¾­ÑéÖµÊÇ2
+        //è¿™é‡Œæ˜¯é‡ç‚¹ï¼Œè¿™ç§æ–¹æ³•æ˜¯æ¨¡ç³Šæ¨¡æ‹Ÿè´å¡å°”æ›²çº¿çš„ï¼Œ
+        //å¦‚æœéœ€è¦ç²¾ç¡®åœ°æ¨¡æ‹Ÿæ˜¯éœ€è¦è§£ä¸‰æ¬¡æ–¹ç¨‹çš„
+        //ä½†æ˜¯æˆ‘ä»¬åŒæ ·éœ€è¦æ¯”è¾ƒç²¾ç¡®çš„åˆ†éƒ¨æ›²çº¿ï¼Œå…·ä½“çš„åšæ³•æ˜¯ä¹˜ä¸€ä¸ªæ¯”ä¾‹ç³»æ•°ï¼Œç»éªŒå€¼æ˜¯2
         for(var i = 0,length = Math.ceil(count*2); i <= length ; i++){
             tmp = self._cubicBezier(type, (i/2) * (1/count) );
             target.cb.push(tmp);
@@ -327,7 +326,7 @@ var Tick = (function(w,u){
             move();
         },timeScale);
 
-        //±Õ°üº¯Êı£¬todo£ºÉèÖÃ³ÉÔ­ĞÍ·½·¨
+        //é—­åŒ…å‡½æ•°ï¼Œtodoï¼šè®¾ç½®æˆåŸå‹æ–¹æ³•
         function move(){
             var scale = target.cb[index++];
 
