@@ -1,7 +1,7 @@
 /**
  * Created by mac on 14-3-13.
  */
-var Tick = (function(w,u){
+(function(w,u){
     var window = w,
         undefined = u,
         isIE = !window.getComputedStyle,
@@ -298,7 +298,7 @@ var Tick = (function(w,u){
         speed /= 2;
 
         var self = this,
-            timeScale = 1000/60,
+            timeScale = 1000/70,
             count = speed / timeScale ,
             index = 1,
             time = 0;
@@ -347,8 +347,8 @@ var Tick = (function(w,u){
 
                 timeScale = sub;
 
-                if(timeScale < 13)
-                    timeScale = 13;
+                if(timeScale < 1000/70)
+                    timeScale = 1000/70;
 
                 time = speed * scale.x;
 
@@ -366,6 +366,6 @@ var Tick = (function(w,u){
         }
     };
 
-    return Tick;
+    w.Tick = Tick;
 
-}(window,undefined));
+}(window));
