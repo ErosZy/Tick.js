@@ -40,7 +40,6 @@ IE6+、Chrome、Firefox、Safari、Opera等浏览器
 
 ````
 	Tick.to(element,props,type,speed,callback.callbackParams)
-	
 ````
 
 ````
