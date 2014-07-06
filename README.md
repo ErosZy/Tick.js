@@ -1,7 +1,7 @@
 Tick.js
 =======
 
-a lightweight animation library for javascript
+a lightweight animation library for javascript 
 
 
 #1.简介
