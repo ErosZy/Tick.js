@@ -1,7 +1,7 @@
 /**
  * Created by mac on 14-3-13.
  */
-(function(w,u){
+;(function(w,u){
     var window = w,
         undefined = u,
         isIE = !window.getComputedStyle,
