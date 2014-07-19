@@ -294,14 +294,9 @@
      * @private
      */
     Tick._animate = function(target,json,type,speed,fn,fnParams){
-
-        speed /= 2;
-
         var self = this,
-            timeScale = 1000/70,
-            count = speed / timeScale ,
-            index = 1,
-            time = 0;
+            timeScale = 1000 / 60,
+            timeCount = 0;
 
         for(var item in json){
             target[item] = {};
@@ -309,29 +304,21 @@
         }
 
         target.timer = target.timer ? target.timer : {};
-        target.cb = [];
 
-        if(target.timer)
+        if(target.timer){
             clearTimeout(target.timer);
-
-        //这里是重点，这种方法是模糊模拟贝塞尔曲线的，
-        //如果需要精确地模拟是需要解三次方程的
-        //但是我们同样需要比较精确的分部曲线，具体的做法是乘一个比例系数，经验值是2
-        for(var i = 0,length = Math.ceil(count*2); i <= length ; i++){
-            tmp = self._cubicBezier(type, (i/2) * (1/count) );
-            target.cb.push(tmp);
         }
 
-        target.timer = setTimeout(function(){
-            move();
-        },timeScale);
+        target.timer = setInterval(function(){
+            var shouldStop = false,
+                scale,param;
 
-        //闭包函数，todo：设置成原型方法
-        function move(){
-            var scale = target.cb[index++];
+            timeCount += timeScale;
+            shouldStop = speed - timeCount < timeScale;
+            param = shouldStop ? 1 : timeCount / speed;
+            scale = self._cubicBezier({a:{x:0.92,y:1.03},b:{x:0.93,y:-0.08}},param);
 
-            if(index >= target.cb.length){
-
+            if(shouldStop){
                 for(var item in json){
                     var newValue = target[item].oldValue + (json[item] - target[item].oldValue) * scale.y;
                     self._css(target,item,newValue);
@@ -339,31 +326,17 @@
 
                 clearInterval(target.timer);
 
-                if(typeof fn == "function")
+                if(typeof fn == "function"){
                     fn.apply(target,fnParams);
+                }
 
             }else{
-                var sub = speed * scale.x - time;
-
-                timeScale = sub;
-
-                if(timeScale < 1000/70)
-                    timeScale = 1000/70;
-
-                time = speed * scale.x;
-
                 for(var item in json){
                     var newValue = target[item].oldValue + (json[item] - target[item].oldValue) * scale.y;
                     self._css(target,item,newValue);
                 }
             }
-
-            if(index < target.cb.length){
-                target.timer = setTimeout(function(){
-                    move();
-                },timeScale);
-            }
-        }
+        },timeScale);
     };
 
     w.Tick = Tick;

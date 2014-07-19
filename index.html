@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			*{
+				padding:0px;
+				margin:0px;
+			}
+			body{
+				font-size:12px;
+			}
+			#container{
+				width:50px;
+				height:50px;
+				background:red;
+				position: absolute;
+				top:0px;
+				left:0px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container"></div>
+		<script src="./Tick.js"></script>
+		<script>
+			var d = document.getElementById("container");
+			window.t = +new Date();
+			Tick.to(d,{left:400,onComplete:function(){console.log(+new Date() - t);}},"easeInOutBack",1000);
+		</script>
+	</body>
+</html>
