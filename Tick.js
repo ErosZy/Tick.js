@@ -316,7 +316,7 @@
             timeCount += timeScale;
             shouldStop = speed - timeCount < timeScale;
             param = shouldStop ? 1 : timeCount / speed;
-            scale = self._cubicBezier({a:{x:0.92,y:1.03},b:{x:0.93,y:-0.08}},param);
+            scale = self._cubicBezier(type,param);
 
             if(shouldStop){
                 for(var item in json){
